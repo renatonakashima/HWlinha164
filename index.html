@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Linha 1:64 – Colecionismo Hot Wheels</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -11,66 +12,62 @@
       background: #f4f4f4;
       color: #333;
     }
+
     header {
       background: #111;
       color: #fff;
       padding: 20px;
     }
+
     header h1 {
       margin: 0;
-      font-size: 28px;
     }
+
     nav a {
       color: #ddd;
       margin-right: 15px;
       text-decoration: none;
       font-size: 14px;
     }
+
     .container {
       max-width: 1100px;
       margin: 30px auto;
       padding: 0 20px;
     }
+
     .highlight {
       background: #fff;
       padding: 20px;
       margin-bottom: 30px;
       border-radius: 4px;
     }
+
     .section-title {
       margin-bottom: 15px;
       border-bottom: 2px solid #eee;
       padding-bottom: 5px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: #fff;
       padding: 15px;
       border-radius: 4px;
     }
-    .lot-card {
-      background: #fafafa;
-      padding: 15px;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-    }
-    .lot-card a {
-      display: inline-block;
-      margin-top: 8px;
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: bold;
-    }
+
     .mural {
       background: #222;
       color: #fff;
       padding: 20px;
       border-radius: 4px;
     }
+
     footer {
       background: #111;
       color: #aaa;
@@ -79,66 +76,75 @@
       margin-top: 40px;
       font-size: 13px;
     }
-    
-  .layout {
-    display: flex;
-    gap: 20px;
-  }
 
-  .main-content {
-    flex: 1;
-  }
-
-  .sidebar {
-    width: 300px;
-  }
-
-  .ad-box {
-    background: #bababa;
-    border: 1px dashed #ccc;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-
-  /* Responsivo: remove banner no mobile */
-  @media (max-width: 900px) {
-    .layout {
-      flex-direction: column;
+    /* ===== LOTTIE ===== */
+    .lottie-box {
+      text-align: center;
+      margin: 30px 0;
     }
-    .sidebar {
-      width: 100%;
+
+    .lottie-box lottie-player {
+      max-width: 300px;
+      margin: 0 auto;
     }
-  }
+
+    /* ===== BOTÃO SUBMISSÃO ===== */
+    .box-envio {
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      margin: 30px 0;
+      border-left: 5px solid #ff6600;
+      text-align: center;
+    }
+
+    .btn-enviar {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn-enviar:hover {
+      background: #e65c00;
+    }
 
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Linha 1:64</h1>
+  <h1><a href="index.html" style="color:#fff; text-decoration:none;">Linha 1:64</a></h1>
   <nav>
-    <a href="#">Início</a>
-	<a href="historia-hotwheels.html">História</a>
-    <a href="#">Lançamentos</a>
-    <a href="#">Guias</a>
-    <a href="#">TH & STH</a>
+    <a href="index.html">Início</a>
+    <a href="historia-hotwheels.html">História</a>
     <a href="lote-jdm-2024.html">Lotes</a>
-    <a href="#">Mural do Colecionador</a>
     <a href="sobre.html">Sobre</a>
   </nav>
 </header>
 
+<div class="container">
 
-<div class="container layout">
+  <!-- ===== LOTTIE DESTACADO ===== -->
+  <div class="lottie-box">
+    <lottie-player 
+      src="assets/lottie/animacao.json"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px;"
+      loop
+      autoplay>
+    </lottie-player>
+  </div>
 
-  <div class="main-content">
-
-  <!-- Destaque principal -->
+  <!-- Destaque -->
   <div class="highlight">
-    <h2>🎯 O que é T-Hunt e um Super T-Hunt?</h2>
+    <h2>🎯 O que é Treasure Hunt e Super Treasure Hunt?</h2>
     <p>
       Um guia completo para identificar, entender e não confundir os modelos
       mais procurados do Hot Wheels.
@@ -163,17 +169,21 @@
     </div>
   </div>
 
-  <!-- Lotes -->
-  <h3 class="section-title">Modelos organizados por lote</h3>
-  <div class="grid">
-    <div class="lot-card">
-      <h4>📦 Lote 2024 – Série JDM</h4>
-      <p>
-        Modelos japoneses lançados em 2024, incluindo variações comuns,
-        Treasure Hunt e Super Treasure Hunt.
-      </p>
-      <a href="lote-jdm-2024.html">Ver modelos do lote →</a>
-    </div>
+  <!-- CTA envio de fotos -->
+  <div class="box-envio">
+    <h3>📸 Contribua com o site</h3>
+    <p>
+      Tem um modelo na sua coleção? Envie sua foto e ajude a construir
+      o banco de imagens do Linha 1:64.
+    </p>
+
+    <a href="https://forms.gle/SEU-LINK" target="_blank" class="btn-enviar">
+      Enviar minha foto →
+    </a>
+
+    <p style="font-size:12px;color:#666;margin-top:10px;">
+      Ao enviar, você declara que a imagem é sua e autoriza o uso no site.
+    </p>
   </div>
 
   <!-- Mural -->
@@ -188,7 +198,7 @@
     <a href="#" style="color:#ffd700;">Ver todos os anúncios →</a>
   </div>
 
-  <!-- Evergreen -->
+  <!-- Guias -->
   <h3 class="section-title">Guias essenciais</h3>
   <div class="grid">
     <div class="card">Como começar uma coleção Hot Wheels</div>
@@ -198,27 +208,15 @@
 
 </div>
 
-  <!-- Sidebar / Anúncios -->
-  <aside class="sidebar">
-    <div class="ad-box">
-      Espaço para anúncio<br>
-      300 x 250
-    </div>
-
-    <div class="ad-box">
-      Banner vertical<br>
-      300 x 600
-    </div>
-  </aside>
-
-</div>
-
 <footer>
   <p>
     Linha 1:64 é um projeto de colecionadores para colecionadores.<br>
     O site não participa nem se responsabiliza por negociações entre usuários.
   </p>
 </footer>
+
+<!-- SCRIPT LOTTIE -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"</>
 
 </body>
 </html>
