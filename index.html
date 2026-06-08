@@ -7,13 +7,17 @@
 
   <style>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
+/* ===== BASE ===== */
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+
+/* ===== HEADER COM LOGO ANIMADO ===== */
 
 .header {
   background: #111;
@@ -25,21 +29,20 @@
   align-items: center;
 }
 
-
-/* BLOCO ESQUERDO (LOGO + TEXTO) */
+/* LOGO + TEXTO */
 .logo-area {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* ANIMAÇÃO */
+/* ANIMAÇÃO (LOGO) */
 .logo-area lottie-player {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
 }
 
-/* TEXTO */
+/* TEXTO DO LOGO */
 .logo-area h1 {
   margin: 0;
   font-size: 22px;
@@ -51,7 +54,8 @@
 }
 
 
-/* MENU */
+/* ===== MENU ===== */
+
 nav a {
   color: #ddd;
   margin-left: 15px;
@@ -63,135 +67,146 @@ nav a:hover {
   color: #fff;
 }
 
-    header h1 {
-      margin: 0;
-    }
 
-    nav a {
-      color: #ddd;
-      margin-right: 15px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+/* ===== LAYOUT PRINCIPAL ===== */
 
-    /* LAYOUT COM SIDEBAR */
-    .layout {
-      display: flex;
-      gap: 20px;
-    }
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
 
-    .main-content {
-      flex: 1;
-    }
+.layout {
+  display: flex;
+  gap: 20px;
+}
 
-    .sidebar {
-      width: 300px;
-    }
+.main-content {
+  flex: 1;
+}
 
-    .container {
-      max-width: 120px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
+.sidebar {
+  width: 300px;
+}
 
-    .highlight {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 4px;
-    }
 
-    .section-title {
-      margin-bottom: 15px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
+/* ===== CONTEÚDO ===== */
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.highlight {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
 
-    .card {
-      background: #fff;
-      padding: 15px;
-      border-radius: 4px;
-    }
+.section-title {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
 
-    .mural {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      border-radius: 4px;
-    }
 
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 13px;
-    }
+/* ===== GRID ===== */
 
-    /* LOTTIE */
-    .lottie-box {
-      text-align: center;
-      margin: 30px 0;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .lottie-box lottie-player {
-     display: flex;
-     justify-content: flex-start;
-     margin: 30px 0;
-    }
 
-    /* BOTÃO */
-    .box-envio {
-      background: #fff;
-      padding: 20px;
-      border-radius: 4px;
-      margin: 30px 0;
-      border-left: 5px solid #ff6600;
-      text-align: center;
-    }
+/* ===== CARDS ===== */
 
-    .btn-enviar {
-      display: inline-block;
-      background: #ff6600;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+}
 
-    .btn-enviar:hover {
-      background: #e65c00;
-    }
 
-    /* BANNERS */
-    .ad-box {
-      background: #fff;
-      border: 1px dashed #ccc;
-      padding: 15px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
-    }
+/* ===== MURAL ===== */
 
-    /* RESPONSIVO */
-    @media (max-width: 900px) {
-      .layout {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-      }
-    }
+.mural {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
+/* ===== BLOCO DE ENVIO ===== */
+
+.box-envio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 30px 0;
+  border-left: 5px solid #ff6600;
+  text-align: center;
+}
+
+.btn-enviar {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-enviar:hover {
+  background: #e65c00;
+}
+
+
+/* ===== BANNERS / SIDEBAR ===== */
+
+.ad-box {
+  background: #fff;
+  border: 1px dashed #ccc;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-area h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}
 
   </style>
 </head>
