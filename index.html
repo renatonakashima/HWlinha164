@@ -14,11 +14,54 @@
       color: #333;
     }
 
-    header {
-      background: #111;
-      color: #fff;
-      padding: 20px;
-    }
+
+.header {
+  background: #111;
+  color: #fff;
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* BLOCO ESQUERDO (LOGO + TEXTO) */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ANIMAÇÃO */
+.logo-area lottie-player {
+  width: 60px;
+  height: 60px;
+}
+
+/* TEXTO */
+.logo-area h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.logo-area a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* MENU */
+nav a {
+  color: #ddd;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fff;
+}
 
     header h1 {
       margin: 0;
@@ -155,14 +198,29 @@
 
 <body>
 
-<header>
-  <h1><a href="index.html" style="color:#fff; text-decoration:none;">Linha 1:64</a></h1>
+<header class="header">
+
+  <div class="logo-area">
+
+    <lottie-player
+      src="assets/lottie/animacao.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay>
+    </lottie-player>
+
+    <h1><a href="index.html">Linha 1:64</a></h1>
+
+  </div>
+
   <nav>
     <a href="index.html">Início</a>
     <a href="historia-hotwheels.html">História</a>
-    <a href="pages/lotes/lote-jdm-2024.html">Lotes</a>
+    <a href="lote-jdm-2024.html">Lotes</a>
     <a href="sobre.html">Sobre</a>
   </nav>
+
 </header>
 
 <div class="container layout">
