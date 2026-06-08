@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
@@ -30,8 +31,22 @@
       font-size: 14px;
     }
 
+    /* LAYOUT COM SIDEBAR */
+    .layout {
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 300px;
+    }
+
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 30px auto;
       padding: 0 20px;
     }
@@ -77,18 +92,18 @@
       font-size: 13px;
     }
 
-    /* ===== LOTTIE ===== */
+    /* LOTTIE */
     .lottie-box {
       text-align: center;
       margin: 30px 0;
     }
 
     .lottie-box lottie-player {
-      max-width: 300px;
+      max-width: 280px;
       margin: 0 auto;
     }
 
-    /* ===== BOTÃO SUBMISSÃO ===== */
+    /* BOTÃO */
     .box-envio {
       background: #fff;
       padding: 20px;
@@ -113,6 +128,27 @@
       background: #e65c00;
     }
 
+    /* BANNERS */
+    .ad-box {
+      background: #fff;
+      border: 1px dashed #ccc;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+    }
+
   </style>
 </head>
 
@@ -123,92 +159,92 @@
   <nav>
     <a href="index.html">Início</a>
     <a href="historia-hotwheels.html">História</a>
-    <a href="lote-jdm-2024.html">Lotes</a>
+    <a href="pages/lotes/lote-jdm-2024.html">Lotes</a>
     <a href="sobre.html">Sobre</a>
   </nav>
 </header>
 
-<div class="container">
+<div class="container layout">
 
-  <!-- ===== LOTTIE DESTACADO ===== -->
-  <div class="lottie-box">
-    <lottie-player 
-      src="assets/lottie/animacao.json"
-      background="transparent"
-      speed="1"
-      style="width: 300px; height: 300px;"
-      loop
-      autoplay>
-    </lottie-player>
-  </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="main-content">
 
-  <!-- Destaque -->
-  <div class="highlight">
-    <h2>🎯 O que é Treasure Hunt e Super Treasure Hunt?</h2>
-    <p>
-      Um guia completo para identificar, entender e não confundir os modelos
-      mais procurados do Hot Wheels.
-    </p>
-    <a href="#">Ler o guia completo →</a>
-  </div>
-
-  <!-- Últimos conteúdos -->
-  <h3 class="section-title">Últimos conteúdos</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Novos lançamentos 2026</h4>
-      <p>Primeiras imagens e impressões.</p>
+    <!-- LOTTIE -->
+    <div class="lottie-box">
+      <lottie-player
+        src="assets/lottie/animacao.json"
+        background="transparent"
+        speed="1"
+        style="width: 100%; height: auto;"
+        loop
+        autoplay>
+      </lottie-player>
     </div>
-    <div class="card">
-      <h4>Esse casting vale a pena?</h4>
-      <p>Análise honesta de um modelo recente.</p>
+
+    <!-- Destaque -->
+    <div class="highlight">
+      <h2>🎯 O que é Treasure Hunt e Super Treasure Hunt?</h2>
+      <p>
+        Um guia completo para identificar, entender e não confundir os modelos
+        mais procurados do Hot Wheels.
+      </p>
+      <a href="#">Ler o guia completo →</a>
     </div>
-    <div class="card">
-      <h4>Série que poucos valorizam</h4>
-      <p>Uma coleção esquecida, mas interessante.</p>
+
+    <!-- Conteúdos -->
+    <h3 class="section-title">Últimos conteúdos</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Novos lançamentos 2026</h4>
+        <p>Primeiras imagens e impressões.</p>
+      </div>
+      <div class="card">
+        <h4>Esse casting vale a pena?</h4>
+        <p>Análise honesta de um modelo recente.</p>
+      </div>
+      <div class="card">
+        <h4>Série que poucos valorizam</h4>
+        <p>Uma coleção esquecida, mas interessante.</p>
+      </div>
     </div>
+
+    <!-- CTA -->
+    <div class="box-envio">
+      <h3>📸 Contribua com o site</h3>
+      <p>
+        Envie fotos da sua coleção e ajude a construir o banco de imagens.
+      </p>
+
+      <a href="https://forms.gle/SEU-LINK" target="_blank" class="btn-enviar">
+        Enviar minha foto →
+      </a>
+
+      <p style="font-size:12px;color:#666;margin-top:10px;">
+        Ao enviar, você autoriza o uso da imagem no site.
+      </p>
+    </div>
+
+    <!-- Mural -->
+    <h3 class="section-title">Mural do Colecionador</h3>
+    <div class="mural">
+      <p><strong>🔴 VENDO</strong> – Nissan Skyline R34 STH</p>
+      <p>📍 Campinas – SP | 💰 R$ 350</p>
+      <hr>
+      <p><strong>🔵 TROCO</strong> – Jeep Super Treasure Hunt</p>
+      <p>📍 São Paulo – SP</p>
+    </div>
+
+    <!-- Guias -->
+    <h3 class="section-title">Guias essenciais</h3>
+    <div class="grid">
+      <div class="card">Como começar uma coleção</div>
+      <div class="card">Lista de Super TH</div>
+      <div class="card">Como saber se é original</div>
+    </div>
+
   </div>
 
-  <!-- CTA envio de fotos -->
-  <div class="box-envio">
-    <h3>📸 Contribua com o site</h3>
-    <p>
-      Tem um modelo na sua coleção? Envie sua foto e ajude a construir
-      o banco de imagens do Linha 1:64.
-    </p>
-
-    <a href="https://forms.gle/SEU-LINK" target="_blank" class="btn-enviar">
-      Enviar minha foto →
-    </a>
-
-    <p style="font-size:12px;color:#666;margin-top:10px;">
-      Ao enviar, você declara que a imagem é sua e autoriza o uso no site.
-    </p>
-  </div>
-
-  <!-- Mural -->
-  <h3 class="section-title">Mural do Colecionador</h3>
-  <div class="mural">
-    <p><strong>🔴 VENDO</strong> – Nissan Skyline R34 STH</p>
-    <p>📍 Campinas – SP | 💰 R$ 350 | 📩 Instagram: @colecionador</p>
-    <hr>
-    <p><strong>🔵 TROCO</strong> – Jeep Super Treasure Hunt</p>
-    <p>📍 São Paulo – SP | Procuro JDM ou Muscle</p>
-    <br>
-    <a href="#" style="color:#ffd700;">Ver todos os anúncios →</a>
-  </div>
-
-  <!-- Guias -->
-  <h3 class="section-title">Guias essenciais</h3>
-  <div class="grid">
-    <div class="card">Como começar uma coleção Hot Wheels</div>
-    <div class="card">Lista completa de Super TH por ano</div>
-    <div class="card">Como saber se um Hot Wheels é original</div>
-  </div>
-
-</div>
-  
-  <!-- Sidebar / Anúncios -->
+  <!-- SIDEBAR COM ANÚNCIOS -->
   <aside class="sidebar">
     <div class="ad-box">
       Espaço para anúncio<br>
@@ -220,16 +256,15 @@
       300 x 600
     </div>
   </aside>
-  
+
+</div>
+
 <footer>
-  <p>
-    Linha 1:64 é um projeto de colecionadores para colecionadores.<br>
-    O site não participa nem se responsabiliza por negociações entre usuários.
-  </p>
+  Linha 1:64 – Projeto de colecionadores para colecionadores.
 </footer>
 
-<!-- SCRIPT LOTTIE -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"</>
+<!-- LOTTIE SCRIPT -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
 </html>
