@@ -4,61 +4,34 @@
   <meta charset="UTF-8">
   <title>A história do início dos Hot Wheels | Linha 1:64</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    nav a {
-      color: #ddd;
-      margin-right: 15px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    .content {
-      background: #fff;
-      padding: 25px;
-      border-radius: 4px;
-      line-height: 1.6;
-    }
-    .content h2 {
-      margin-top: 0;
-    }
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 13px;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<header>
-  <h1>Linha 1:64</h1>
+
+<header class="header">
+
+  <div class="logo-area">
+
+    <lottie-player
+      src="assets/lottie/AnimacaoCarro.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay>
+    </lottie-player>
+
+    <h1><a href="index.html">Linha 1:64</a></h1>
+
+  </div>
+
   <nav>
-  <a href="index.html">Início</a>
-  <a href="historia-hotwheels.html">História</a>
-  <a href="sobre.html">Sobre</a>
-</nav>
+    <a href="index.html">Início</a>
+    <a href="historia-hotwheels.html">História</a>
+    <a href="lote-jdm-2024.html">Lotes</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+
 </header>
 
 <div class="container">
@@ -101,6 +74,8 @@
 <footer>
   Linha 1:64 é um projeto de colecionadores para colecionadores.
 </footer>
-
+  
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
 </body>
 </html>
