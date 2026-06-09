@@ -1,0 +1,200 @@
+/* ===== BASE ===== */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+
+/* ===== HEADER COM LOGO ANIMADO ===== */
+
+.header {
+  background: #111;
+  color: #fff;
+  padding: 10px 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO + TEXTO */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ANIMAÇÃO (LOGO) */
+.logo-area lottie-player {
+  width: 90px;
+  height: 90px;
+}
+
+/* TEXTO DO LOGO */
+.logo-area h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.logo-area a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* ===== MENU ===== */
+
+nav a {
+  color: #ddd;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+
+/* ===== LAYOUT PRINCIPAL ===== */
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.sidebar {
+  width: 300px;
+}
+
+
+/* ===== CONTEÚDO ===== */
+
+.highlight {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.section-title {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+
+/* ===== GRID ===== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+/* ===== CARDS ===== */
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+
+/* ===== MURAL ===== */
+
+.mural {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
+/* ===== BLOCO DE ENVIO ===== */
+
+.box-envio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 30px 0;
+  border-left: 5px solid #ff6600;
+  text-align: center;
+}
+
+.btn-enviar {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-enviar:hover {
+  background: #e65c00;
+}
+
+
+/* ===== BANNERS / SIDEBAR ===== */
+
+.ad-box {
+  background: #fff;
+  border: 1px dashed #ccc;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-area h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}
