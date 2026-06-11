@@ -44,6 +44,42 @@ body {
   text-decoration: none;
 }
 
+/* ===== LISTA DE LOTES EM COLUNAS ===== */
+
+.lotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.lote-ano {
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.lote-ano h3 {
+  margin-top: 0;
+}
+
+.lote-ano ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lote-ano li {
+  margin-bottom: 5px;
+}
+
+.lote-ano a {
+  text-decoration: none;
+  color: #333;
+}
+
+.lote-ano a:hover {
+  color: #ff6600;
+}
 
 /* ===== MENU ===== */
 
