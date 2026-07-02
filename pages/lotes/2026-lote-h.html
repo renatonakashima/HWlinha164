@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>2026 Lote H – Linha 1:64</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  ../../assets/css/style.css
+
+  <style>
+    /* GRID DE CARDS */
+    .grid-lote {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card-lote {
+      background: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .card-lote img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .card-lote h4 {
+      font-size: 13px;
+      margin: 10px 0 5px;
+    }
+
+    .status {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #e65c00;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .grid-lote {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-lote {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-area">
+    ../../assets/lottie/AnimacaoCarro.json
+    </lottie-player>
+
+    <h1><a href="../../index.html">Linha 1:64</a></h1>
+  </div>
+
+  <nav>
+    <a href="../../index.html">Início</a>
+    ">História</a>
+    <a href="../">Lotes</a>
+    ">Sobre</a>
+  </nav>
+</header>
+
+<!-- CONTEÚDO -->
+<div class="container layout">
+
+  <div class="main-content">
+
+    <h2>2026 - Lote H</h2>
+    <p>Selecione um modelo para enviar uma foto da sua coleção.</p>
+
+    <div class="grid-lote">
+
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="ad-box">Espaço para anúncio<br>300 x 250</div>
+    <div class="ad-box">Banner vertical<br>300 x 600</div>
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p><strong>Linha 1:64</strong> é um projeto de colecionadores.</p>
+</footer>
+
+<!-- SCRIPT LOTTIE -->
+https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js
+
+<!-- SCRIPT GERADOR DOS 72 CARDS -->
+<script>
+
+const container = document.querySelector(".grid-lote");
+
+for (let i = 1; i <= 72; i++) {
+
+  const nome = `2026 H – Slot ${i}`;
+  const url = encodeURIComponent(nome);
+
+  container.innerHTML += `
+    <div class="card-lote">
+      <img src="../../assets/img/placeholders/sem-imagem.jpg" altme}</h4>
+      <p class="status">Sem imagem</p>
+      <a href="https://forms.gle/SEU-LINK?entry.123456=${url}" target="_blank"    </a>
+    </div>
+  `;
+}
+
+</script>
+
+</body>
+</html>
