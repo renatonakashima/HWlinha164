@@ -38,7 +38,11 @@
   <!-- CONTEÚDO PRINCIPAL -->
   <div class="main-content">
 
-    <!-- LOTTIE 
+    <p id="firestore-status" class="firestore-status" role="status" aria-live="polite">
+      Conectando ao Firestore…
+    </p>
+
+    <!-- LOTTIE
     <div class="lottie-box">
       <lottie-player
         src="assets/lottie/AnimacaoCarro.json"
@@ -62,7 +66,7 @@
 
     <!-- Conteúdos -->
     <h3 class="section-title">Últimos conteúdos</h3>
-    <div class="grid">
+    <div class="grid" id="latest-content-grid">
       <div class="card">
         <h4>Novos lançamentos 2026</h4>
         <p>Primeiras imagens e impressões.</p>
@@ -95,7 +99,7 @@
 
     <!-- Mural -->
     <h3 class="section-title">Mural do Colecionador</h3>
-    <div class="mural">
+    <div class="mural" id="collector-wall">
       <p><strong>🔴 VENDO</strong> – Nissan Skyline R34 STH</p>
       <p>📍 Campinas – SP | 💰 R$ 350</p>
       <hr>
@@ -142,6 +146,7 @@
 
 <!-- LOTTIE SCRIPT -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script type="module" src="assets/js/home-firestore.js"></script>
 
 </body>
 </html>

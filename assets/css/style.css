@@ -246,3 +246,57 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== FIRESTORE ===== */
+.firestore-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #ececec;
+  color: #666;
+  font-size: 12px;
+}
+
+.firestore-status[data-state="loading"] {
+  background: #fff3cd;
+  color: #7a5a00;
+}
+
+.firestore-status[data-state="success"] {
+  background: #dff5e5;
+  color: #176b35;
+}
+
+.firestore-status[data-state="error"] {
+  background: #fbe3e3;
+  color: #8a2525;
+}
+
+.mural-item p {
+  margin: 0 0 6px;
+}
+
+.mural-item p:last-child {
+  margin-bottom: 0;
+}
+
+#latest-content-grid .card,
+#collector-wall {
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+#latest-content-grid .card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #latest-content-grid .card,
+  #collector-wall {
+    transition: none;
+  }
+}

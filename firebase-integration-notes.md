@@ -1,0 +1,25 @@
+# Notas de integração Firebase
+
+- Projeto Firebase confirmado: `HWlinha164`.
+- Project ID confirmado pela URL do console: `hwlinha164`.
+- Conta autenticada no console: Renato Nakashima (`renatonakashima@gmail.com`).
+- Plano exibido: Spark.
+- Cloud Firestore não existia antes da configuração.
+- Criação iniciada com edição Standard, database ID `(default)`, região `southamerica-east1 (São Paulo)` e modo de produção.
+- O Cloud Firestore foi provisionado com sucesso; o console informa `Your database is ready to go` e mostra a localização `southamerica-east1`.
+- O banco criado é o `(default)`.
+- Regra inicial escolhida pelo console: negar leitura e gravação por padrão (`allow read, write: if false`).
+- A primeira tentativa de publicação das regras apresentou erro genérico no console e foi descartada. Após recarregar o editor, a regra mínima foi publicada com sucesso às 18:11; o histórico do console mostra uma versão nova sem alterações não publicadas.
+- Regra ativa: leitura pública somente para `siteContent`, `mural` e `lotes`; caminhos não declarados e gravações permanecem negados por padrão.
+- O site atual é HTML/CSS estático, sem `package.json` e sem SDK Firebase instalado.
+- O aplicativo Web `Linha 1:64` foi registrado com sucesso.
+- App ID: `1:649471893590:web:9747c324847f2e63425bf7`.
+- Configuração pública exibida pelo Firebase: `apiKey` disponível para o SDK web, `authDomain` `hwlinha164.firebaseapp.com`, `projectId` `hwlinha164`, `storageBucket` `hwlinha164.firebasestorage.app`, `messagingSenderId` `649471893590`, `appId` acima e `measurementId` `G-N2NBQ6F4MW`.
+- Teste local HTTP realizado com sucesso: a página inicial carregou os módulos Firebase, consultou `siteContent` e `mural` e exibiu o status `Firestore conectado`; como as coleções ainda estão vazias, o site manteve o conteúdo local.
+- O console do navegador não apresentou erros.
+- Registro inicial criado no Firestore: coleção `siteContent`, documento `welcome-content`, campo `title` com valor `Novidades e guias para colecionadores`.
+- O painel do Firestore confirmou que a coleção `siteContent` e o documento `welcome-content` estão visíveis no banco `(default)`.
+- A coleção `mural` foi criada no mesmo banco `(default)`.
+- Registro inicial criado no Firestore: documento `skyline-r34-sth`, campo `title` com valor `Nissan Skyline R34 STH`.
+- Teste final local aprovado: a página exibiu `Dados atualizados a partir do Firestore`, substituiu os cards locais pelo registro de `siteContent` e substituiu o mural local pelo registro de `mural`.
+- Arquivos principais atuais: `index.html`, `sobre.html`, `historia-hotwheels.html`, `pages/lotes.html`, `pages/lotes/2026-lote-h.html` e `assets/css/style.css`.
