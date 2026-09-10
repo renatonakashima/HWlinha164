@@ -23,3 +23,8 @@
 - Registro inicial criado no Firestore: documento `skyline-r34-sth`, campo `title` com valor `Nissan Skyline R34 STH`.
 - Teste final local aprovado: a página exibiu `Dados atualizados a partir do Firestore`, substituiu os cards locais pelo registro de `siteContent` e substituiu o mural local pelo registro de `mural`.
 - Arquivos principais atuais: `index.html`, `sobre.html`, `historia-hotwheels.html`, `pages/lotes.html`, `pages/lotes/2026-lote-h.html` e `assets/css/style.css`.
+
+- O plano Blaze não foi ativado; o projeto permanece no plano Spark.
+- O Firebase Storage não foi habilitado. A página de cadastro seleciona e pré-visualiza a foto localmente, mas grava no Firestore apenas os metadados do arquivo e o indicador `photoPendingStorage: true`.
+- A coleção `modelSubmissions` foi incluída nas regras do Firestore. Visitantes podem criar apenas cadastros pendentes que atendam às validações de tipo, tamanho e estado; leitura, atualização e exclusão permanecem bloqueadas para o cliente.
+- As regras corrigidas foram publicadas no Firebase Console em 10 de setembro de 2026.

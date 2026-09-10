@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar modelo – Linha 1:64</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-area">
+      <h1><a href="index.html">Linha 1:64</a></h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="historia-hotwheels.html">História</a>
+      <a href="pages/lotes.html">Lotes</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="container cadastro-page">
+    <section class="cadastro-card" aria-labelledby="cadastro-title">
+      <p class="eyebrow">Contribuição da comunidade</p>
+      <h2 id="cadastro-title">Cadastrar meu modelo</h2>
+      <p class="cadastro-intro">Preencha os dados do modelo para colaborar com o catálogo da Linha 1:64.</p>
+
+      <form id="model-form" novalidate>
+        <div class="form-field">
+          <label for="model-photo">Foto do modelo <span class="required">*</span></label>
+          <input id="model-photo" name="modelPhoto" type="file" accept="image/*" required>
+          <p class="field-help">A foto será selecionada e pré-visualizada neste dispositivo. O envio do arquivo ficará disponível quando o armazenamento de imagens for ativado.</p>
+          <div id="photo-preview" class="photo-preview" hidden>
+            <img id="photo-preview-image" alt="Pré-visualização da foto selecionada">
+            <span id="photo-name"></span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="model-name">Nome do modelo <span class="required">*</span></label>
+          <input id="model-name" name="modelName" type="text" maxlength="120" required placeholder="Ex.: Nissan Skyline R34">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="lot-year">Ano do lote <span class="required">*</span></label>
+            <input id="lot-year" name="lotYear" type="number" min="1968" max="2100" step="1" required placeholder="2026">
+          </div>
+          <div class="form-field">
+            <label for="lot-letter">Letra do lote <span class="required">*</span></label>
+            <input id="lot-letter" name="lotLetter" type="text" maxlength="3" required placeholder="H">
+          </div>
+        </div>
+
+        <fieldset class="form-field checkbox-group">
+          <legend>Classificação</legend>
+          <label class="checkbox-label"><input id="is-th" name="classification" type="checkbox" value="TH"> É TH</label>
+          <label class="checkbox-label"><input id="is-sth" name="classification" type="checkbox" value="STH"> É STH</label>
+          <p class="field-help">TH e STH são opções exclusivas: marque no máximo uma delas.</p>
+        </fieldset>
+
+        <div class="form-field">
+          <label class="checkbox-label"><input id="repeats-next-lot" name="repeatsNextLot" type="checkbox"> Repete Próximo Lote</label>
+        </div>
+
+        <div class="form-field">
+          <label for="collaborator-link">Link do usuário colaborador <span class="required">*</span></label>
+          <input id="collaborator-link" name="collaboratorLink" type="url" maxlength="300" required placeholder="https://instagram.com/seu-usuario">
+        </div>
+
+        <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+
+        <div class="form-actions">
+          <button class="btn-primary" type="submit">Confirmar cadastro</button>
+          <a class="btn-secondary" href="index.html">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Linha 1:64</strong> é um projeto de colecionadores para colecionadores.</p>
+  </footer>
+
+  <script type="module" src="assets/js/cadastro-modelo.js"></script>
+</body>
+</html>

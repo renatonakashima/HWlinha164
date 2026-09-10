@@ -17,14 +17,15 @@ A página inicial carrega os dados por meio de `assets/js/home-firestore.js`. Se
 | `siteContent` | `welcome-content` | `title` (string), `description` (string opcional), `order` (number opcional), `visible` (boolean opcional) | Cards em “Últimos conteúdos” |
 | `mural` | `skyline-r34-sth` | `title` (string), `status` (string opcional), `location` (string opcional), `price` (string opcional), `order` (number opcional), `visible` (boolean opcional) | Anúncios em “Mural do Colecionador” |
 | `lotes` | — | Reservada para a próxima etapa de migração do catálogo | Futura página dinâmica de lotes |
+| `modelSubmissions` | gerado automaticamente | `modelName`, `lotYear`, `lotLetter`, `classification`, `isTH`, `isSTH`, `repeatsNextLot`, `collaboratorLink`, metadados da foto e estado de moderação | Recebe contribuições pendentes |
 
 Os documentos são ordenados pelo campo numérico `order`. Quando o campo não existe, o registro aparece depois dos registros ordenados. Documentos com `visible: false` não são renderizados.
 
 ## Regras de segurança atuais
 
-As regras publicadas permitem leitura pública somente para documentos dentro de `siteContent`, `mural` e `lotes`. Gravações pelo navegador permanecem negadas, assim como qualquer caminho que não esteja explicitamente declarado. Isso evita que visitantes alterem o conteúdo diretamente.
+As regras publicadas permitem leitura pública somente para documentos dentro de `siteContent`, `mural` e `lotes`. O navegador pode criar apenas documentos validados em `modelSubmissions`, sempre como pendentes de moderação; qualquer leitura, edição ou exclusão desses cadastros pelo cliente permanece bloqueada.
 
-Para inserir ou editar dados neste estágio, use o Firebase Console com uma conta administrativa. Caso o site precise receber envios diretamente no futuro, implemente autenticação e regras por usuário antes de liberar `create` ou `update` no cliente.
+Para inserir ou editar dados editoriais neste estágio, use o Firebase Console com uma conta administrativa. O formulário público pode criar apenas documentos pendentes em `modelSubmissions`; esses documentos não ficam legíveis, editáveis ou excluíveis pelo cliente. A foto é selecionada e pré-visualizada no navegador, mas não é enviada enquanto o projeto permanecer no plano Spark, pois o Firebase Storage exige o upgrade para o Blaze. Caso o site precise persistir imagens no futuro, habilite o Storage conscientemente e revise as regras antes de liberar esse fluxo.
 
 ## Desenvolvimento local
 
